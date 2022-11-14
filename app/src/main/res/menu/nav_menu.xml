@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"/>
+
+    <item
+        android:id="@+id/nav_message"
+        android:icon="@drawable/ic_emploi"
+        android:title="@string/message"/>
+
+    <item
+        android:id="@+id/nav_sync"
+        android:icon="@drawable/ic_evaluation"
+        android:title="@string/sync"/>
+
+    <item
+        android:id="@+id/nav_trash"
+        android:icon="@drawable/ic_absence"
+        android:title="@string/trash"/>
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings"/>
+
+    <item android:title="@string/profile">
+        <menu>
+
+            <item
+                android:id="@+id/nav_login"
+                android:icon="@drawable/ic_login"
+                android:title="@string/title"/>
+
+        </menu>
+    </item>
+
+
+    <item android:title="@string/communicate">
+
+        <menu>
+
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_transport"
+                android:title="@string/share"/>
+
+            <item
+                android:id="@+id/nav_rate_us"
+                android:icon="@drawable/ic_rate_review"
+                android:title="@string/rate"/>
+
+        </menu>
+
+    </item>
+
+</menu>
