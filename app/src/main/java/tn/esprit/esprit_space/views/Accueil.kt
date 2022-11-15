@@ -10,6 +10,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.home_content.*
 import tn.esprit.esprit_space.LOGIN
 import tn.esprit.esprit_space.PREF_NAME
 import tn.esprit.esprit_space.R
@@ -23,6 +24,9 @@ class Accueil : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_accueil)
+        setSupportActionBar(toolbar)
+
+
         mSharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
         Toast.makeText(this@Accueil, "Welcome "+ mSharedPref.getString(LOGIN, "").toString(), Toast.LENGTH_SHORT).show()
 

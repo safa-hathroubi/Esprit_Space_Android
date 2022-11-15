@@ -4,9 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginTop="16dp"
-    android:layout_marginStart="16dp"
-    android:background="@color/white">
+    android:layout_marginTop="0dp"
+    android:layout_marginStart="0dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="60dp"
@@ -19,7 +18,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
         android:text="@string/safa"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -27,13 +26,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/safa_email"
+        android:textColor="@color/white"
         android:textSize="16sp" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="30dp"
-        android:background="@color/red"/>
+        android:background="@color/dark_grey"/>
 
 
 
