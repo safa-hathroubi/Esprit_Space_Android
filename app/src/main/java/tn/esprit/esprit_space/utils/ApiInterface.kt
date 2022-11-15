@@ -11,7 +11,7 @@ interface ApiInterface {
     @POST("user/signup")
     fun signup(@Body map : HashMap<String, String> ): Call<User>
     companion object {
-        var BASE_URL = "http://192.168.1.102:5000/" //change with ur localhost
+        var BASE_URL = "http://172.16.6.128:5000/" //change with ur localhost
         fun create() : ApiInterface {
             val retrofit = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())

@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.home_content.*
 import tn.esprit.esprit_space.LOGIN
@@ -59,6 +60,17 @@ class Accueil : AppCompatActivity() {
         }
 
     }
+
+
+    /*private fun replaceFragment(fragment: Fragment, title: String){
+
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frameLayout, fragment)
+        fragmentTransaction.commit()
+    }*/
+
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
