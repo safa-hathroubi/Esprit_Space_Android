@@ -1,28 +1,36 @@
 <resources>
+    <string name="accueil">Hii</string>
     <string name="app_name">Esprit_Space</string>
+
+    <string name="checkYourEmail">Invalid Email!</string>
+    <string name="communicate">Communicate</string>
+    <string name="close">Close</string>
+
+    <string name="home">Home</string>
     <string name="input_email">Input email</string>
     <string name="input_password">Input password</string>
-    <string name="password_forgotten">Password forgotten?</string>
-    <string name="mustNotBeEmpty">Must not be empty!</string>
-    <string name="checkYourEmail">Invalid Email!</string>
+
     <string name="login">LOGIN</string>
-    <string name="signIn">Sign in</string>
+    <string name="mustNotBeEmpty">Must not be empty!</string>
+    <string name="message">Timetable</string>
+
+    <string name="open">Open</string>
+    <string name="profile">Profile</string>
+
+    <string name="password_forgotten">Password forgotten?</string>
     <string name="rememberMe">Remember me</string>
-    <string name="accueil">Hii</string>
+    <string name="rate">About us</string>
     <string name="safa">Safa Hathroubi</string>
     <string name="safa_email">safa.hathroubi@esprit.tn</string>
-    <string name="profile">Profile</string>
-    <string name="title">Logout</string>
-    <string name="home">Home</string>
-    <string name="message">Timetable</string>
-    <string name="sync">Evaluation</string>
-    <string name="trash">Absences</string>
     <string name="settings">Settings</string>
-    <string name="communicate">Communicate</string>
+    <string name="signIn">Sign in</string>
+    <string name="signup">Sign Up</string>
+    <string name="sync">Evaluation</string>
     <string name="share">Transport Line</string>
-    <string name="rate">Rate us</string>
-    <string name="open">Open</string>
-    <string name="close">Close</string>
+    <string name="trash">Absences</string>
+    <string name="title">Logout</string>
+    <string name="timetable">Timetable here</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
