@@ -4,15 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ECD9C4"
-    tools:context=".MessagesFragment">
+    tools:context=".TransportFragment">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="187dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/timetable"
-        android:textStyle="bold"
+        android:text="@string/transport"
         android:textColor="@color/red"
-        android:textSize="50sp"/>
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
 </FrameLayout>

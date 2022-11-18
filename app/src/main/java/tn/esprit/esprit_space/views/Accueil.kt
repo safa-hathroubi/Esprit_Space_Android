@@ -25,7 +25,12 @@ class Accueil : AppCompatActivity() {
         setContentView(R.layout.activity_accueil)
         setSupportActionBar(toolbar)
 
-        val dashboardFragmentInstance = MessagesFragment.newInstance("param","param")
+        val messagesFragmentInstance = MessagesFragment.newInstance("param","param")
+        val aboutFragmentInstance = AboutFragment.newInstance("param","param")
+        val absencesFragmentInstance = AbsencesFragment.newInstance("param","param")
+        val evaluationFragmentInstance = EvaluationFragment.newInstance("param","param")
+        val settingsFragmentInstance = SettingsFragment.newInstance("param","param")
+        val transportFragmentInstance = TransportFragment.newInstance("param","param")
 
         mSharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
         Toast.makeText(this@Accueil, "Welcome "+ mSharedPref.getString(LOGIN, "").toString(), Toast.LENGTH_SHORT).show()
@@ -46,12 +51,12 @@ class Accueil : AppCompatActivity() {
             when(it.itemId){
 
                 R.id.nav_home -> Toast.makeText(applicationContext,"Clicked Home",Toast.LENGTH_SHORT).show()
-                R.id.nav_message -> replaceFragment(dashboardFragmentInstance, it.title.toString())
-                R.id.nav_sync -> Toast.makeText(applicationContext,"Clicked Sync",Toast.LENGTH_SHORT).show()
-                R.id.nav_trash -> Toast.makeText(applicationContext,"Clicked Trash",Toast.LENGTH_SHORT).show()
-                R.id.nav_login -> Toast.makeText(applicationContext,"Clicked Login",Toast.LENGTH_SHORT).show()
-                R.id.nav_share -> Toast.makeText(applicationContext,"Clicked Share",Toast.LENGTH_SHORT).show()
-                R.id.nav_rate_us -> Toast.makeText(applicationContext,"Clicked Rate us",Toast.LENGTH_SHORT).show()
+                R.id.nav_message -> replaceFragment(messagesFragmentInstance, it.title.toString())
+                R.id.nav_sync -> replaceFragment(evaluationFragmentInstance, it.title.toString())
+                R.id.nav_trash -> replaceFragment(absencesFragmentInstance, it.title.toString())
+                R.id.nav_share -> replaceFragment(transportFragmentInstance, it.title.toString())
+                R.id.nav_login -> replaceFragment(settingsFragmentInstance, it.title.toString())
+                R.id.nav_rate_us -> replaceFragment(aboutFragmentInstance, it.title.toString())
             }
 
             true

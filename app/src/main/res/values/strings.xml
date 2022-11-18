@@ -30,6 +30,10 @@
     <string name="trash">Absences</string>
     <string name="title">Logout</string>
     <string name="timetable">Timetable here</string>
+    <string name="evaluation">Exams + Results + Credits</string>
+    <string name="absences">See your absences here</string>
+    <string name="transport">Transport Line</string>
+    <string name="about_us">About us</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
