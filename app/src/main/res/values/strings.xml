@@ -25,6 +25,7 @@
     <string name="settings">Settings</string>
     <string name="signIn">Sign in</string>
     <string name="signup">Sign Up</string>
+    <string name="signup2"><u><i>Don\'t have an account? Sign up</i></u></string>
     <string name="sync">Evaluation</string>
     <string name="share">Transport Line</string>
     <string name="trash">Absences</string>
