@@ -45,12 +45,13 @@
         android:id="@+id/nav_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient_red"
-        android:textColor="@color/white"
+        android:background="@drawable/drawer_background"
+        app:itemTextColor="#AFAFAF"
+        app:itemIconTint="@color/light_grey"
+        app:subheaderColor="#AA9E9E"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_menu"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"/>
+        />
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

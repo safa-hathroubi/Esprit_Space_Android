@@ -21,7 +21,7 @@
         android:layout_marginStart="10dp"
         android:paddingTop="8dp"
         android:text="@string/safa"
-        android:textColor="@color/white"
+        android:textColor="@color/light_grey"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -30,14 +30,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:text="@string/safa_email"
-        android:textColor="@color/white"
+        android:textColor="@color/light_grey"
         android:textSize="16sp" />
 
     <View
-        android:layout_width="match_parent"
+        android:layout_width="383dp"
         android:layout_height="1dp"
         android:layout_marginTop="30dp"
-        android:background="@color/dark_grey"/>
+        android:background="@color/grey"/>
 
 
 
