@@ -7,44 +7,58 @@
     android:background="@drawable/background_gradient"
     tools:context=".views.SignUp">
 
+    <ImageView
+        android:id="@+id/espritLogo"
+        android:layout_width="132dp"
+        android:layout_height="143dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="-35dp"
+        app:srcCompat="@drawable/kisspng_esprit_higher_school_of_communication_of_tunis_con_emam_5b42b64c541ab4_5414050515310987003445_removebg_preview" />
+
     <RelativeLayout
+        android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
         android:layout_height="632dp"
         android:background="@drawable/gradient_white"
-        app:layout_constraintBottom_toBottomOf="parent" >
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </RelativeLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutEmailSignUp"
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="360dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/input_email"
         app:boxBackgroundColor="@color/white"
 
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
+
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
-
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
 
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="260dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="400dp"
-        android:hint="@string/input_email"
+        android:elevation="52dp"
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:helperText="Email must be ***@esprit.tn"
-        app:helperTextTextColor="@color/grey"
         app:errorEnabled="true"
         app:errorIconDrawable="@drawable/ic_error"
-        app:errorTextColor="@color/design_default_color_error">
+        app:errorTextColor="@color/design_default_color_error"
+        app:helperText="Email must be ***@esprit.tn"
+        app:helperTextTextColor="@color/grey"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayoutPasswordSignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout2">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputEditTextEmailSignUp"
@@ -56,27 +70,25 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutPasswordSignUp"
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-        app:boxBackgroundColor="@color/white"
-
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-
         android:layout_width="360dp"
+
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="300dp"
+
+        android:hint="@string/input_password"
+        app:boxBackgroundColor="@color/white"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeWidth="0dp"
 
-        android:hint="@string/input_password"
+        app:boxStrokeWidthFocused="0dp"
 
+        app:endIconMode="password_toggle"
         app:errorEnabled="true"
         app:errorTextColor="@color/design_default_color_error"
-        app:endIconMode="password_toggle"
+
+        android:elevation="52dp"
 
         app:helperTextTextAppearance="@style/Widget.AppCompat.Spinner.Underlined"
         app:helperTextTextColor="@color/grey"
@@ -89,7 +101,7 @@
             android:id="@+id/textInputEditTextPasswordSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -100,14 +112,14 @@
         android:layout_height="56dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:gravity="center"
-        android:text="@string/signup"
-        android:textSize="20sp"
-        android:textColor="#F3F3F3"
         android:background="@drawable/button_shape_try"
-        app:cornerRadius="10dp"
         android:elevation="20dp"
+        android:gravity="center"
         android:padding="10dp"
+        android:text="@string/signup"
+        android:textColor="#F3F3F3"
+        android:textSize="20sp"
+        app:cornerRadius="10dp"
         app:layout_constrainedHeight="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -129,22 +141,10 @@
         android:layout_height="60dp"
         android:text="Sign Up"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textInputLayoutEmailSignUp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutEmailSignUp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/espritLogo"
-        android:layout_width="132dp"
-        android:layout_height="143dp"
-        android:layout_marginTop="-30dp"
-        android:layout_marginEnd="280dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/kisspng_esprit_higher_school_of_communication_of_tunis_con_emam_5b42b64c541ab4_5414050515310987003445_removebg_preview" />
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout2" />
 
 
     <ImageView

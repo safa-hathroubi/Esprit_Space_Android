@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="632dp"
         android:background="@drawable/gradient_white"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </RelativeLayout>
 
@@ -116,8 +117,8 @@
     <android.widget.Button
         android:id="@+id/loginButton"
 
-        android:layout_width="360"
-        android:layout_height="56"
+        android:layout_width="360dp"
+        android:layout_height="56dp"
 
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
@@ -147,7 +148,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword" />
 
 
-
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
@@ -157,10 +157,10 @@
         android:inputType="textPersonName"
         android:text="@string/signIn"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textInputLayoutEmail"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
 
     <ImageView
         android:id="@+id/espritLogo"
@@ -193,7 +193,6 @@
         android:text="@string/signup2"
         android:textColor="@color/dark_grey"
         android:textSize="15sp"
-        android:textStyle="Underlined"
         android:background="@color/android:transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

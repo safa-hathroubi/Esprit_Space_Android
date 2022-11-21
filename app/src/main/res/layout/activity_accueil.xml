@@ -51,6 +51,8 @@
         app:subheaderColor="#AA9E9E"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_menu"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
         />
 
 
