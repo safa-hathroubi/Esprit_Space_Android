@@ -28,7 +28,7 @@ class Accueil : AppCompatActivity() {
         val messagesFragmentInstance = MessagesFragment.newInstance("param","param")
         val aboutFragmentInstance = AboutFragment.newInstance("param","param")
         val absencesFragmentInstance = AbsencesFragment.newInstance("param","param")
-        val evaluationFragmentInstance = EvaluationFragment.newInstance("param","param")
+        val evaluationFragmentInstance = EvaluationFragment()
         val settingsFragmentInstance = SettingsFragment.newInstance("param","param")
         val transportFragmentInstance = TransportFragment.newInstance("param","param")
 
