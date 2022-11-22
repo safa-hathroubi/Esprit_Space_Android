@@ -25,6 +25,7 @@ class Accueil : AppCompatActivity() {
         setContentView(R.layout.activity_accueil)
         setSupportActionBar(toolbar)
 
+        val homeFragmentInstance = HomeFragment.newInstance("param","param")
         val messagesFragmentInstance = MessagesFragment.newInstance("param","param")
         val aboutFragmentInstance = AboutFragment.newInstance("param","param")
         val absencesFragmentInstance = AbsencesFragment.newInstance("param","param")
@@ -50,7 +51,7 @@ class Accueil : AppCompatActivity() {
 
             when(it.itemId){
 
-                R.id.nav_home -> Toast.makeText(applicationContext,"Clicked Home",Toast.LENGTH_SHORT).show()
+                R.id.nav_home -> replaceFragment(homeFragmentInstance, it.title.toString())
                 R.id.nav_message -> replaceFragment(messagesFragmentInstance, it.title.toString())
                 R.id.nav_sync -> replaceFragment(evaluationFragmentInstance, it.title.toString())
                 R.id.nav_trash -> replaceFragment(absencesFragmentInstance, it.title.toString())
