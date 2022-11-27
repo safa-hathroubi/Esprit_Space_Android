@@ -7,6 +7,8 @@
     <string name="close">Close</string>
     <string name="date">Date</string>
 
+    <string name="edit_profile">Edit Profile</string>
+
     <string name="home">Home</string>
     <string name="input_email">Input email</string>
     <string name="input_password">Input password</string>
