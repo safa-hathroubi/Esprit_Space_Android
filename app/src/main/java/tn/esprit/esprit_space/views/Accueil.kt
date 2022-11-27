@@ -53,6 +53,9 @@ class Accueil : AppCompatActivity() {
 
                 R.id.nav_home -> replaceFragment(homeFragmentInstance, it.title.toString())
                 R.id.nav_message -> replaceFragment(messagesFragmentInstance, it.title.toString())
+
+                
+
                 R.id.nav_sync -> replaceFragment(evaluationFragmentInstance, it.title.toString())
                 R.id.nav_trash -> replaceFragment(absencesFragmentInstance, it.title.toString())
                 R.id.nav_share -> replaceFragment(transportFragmentInstance, it.title.toString())

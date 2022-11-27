@@ -61,6 +61,8 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     //library for viewing pdf docs
+    //implementation 'com.pspdfkit:pspdfkit:8.4.1'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
 
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.android.material:material:1.7.0'
