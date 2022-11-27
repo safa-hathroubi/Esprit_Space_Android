@@ -11,18 +11,19 @@ import com.github.barteksc.pdfviewer.PDFView
 class ViewPdfActivity : AppCompatActivity() {
 
     lateinit var pdfView: PDFView
-    val PDF_SELECTION_CODE =100
+    //val PDF_SELECTION_CODE =100
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_pdf)
 
         pdfView = findViewById(R.id.pdfView)
-        selectPdfFromStorage()
+        pdfView.fromAsset("Emploi_21-11-2022.pdf").load()
 
 
     }
 
+    /*
     private fun selectPdfFromStorage() {
         Toast.makeText(this@ViewPdfActivity, "Select PDF File", Toast.LENGTH_SHORT).show()
         val  browseStorage = Intent(Intent.ACTION_GET_CONTENT)
@@ -46,5 +47,5 @@ class ViewPdfActivity : AppCompatActivity() {
                 showPdfFromUri(selectedPdf)
             }
         }
-    }
+    }*/
 }

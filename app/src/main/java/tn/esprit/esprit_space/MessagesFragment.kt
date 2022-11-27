@@ -1,7 +1,7 @@
 package tn.esprit.esprit_space
 
 import android.content.Intent
-import android.net.Uri
+//import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -29,7 +29,7 @@ class MessagesFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    private var showBtn: Button? = null
+    lateinit var showBtn : Button
 
 
 
@@ -39,14 +39,11 @@ class MessagesFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-        showBtn = view?.findViewById(R.id.view_pdf_btn)
 
-        showBtn?.setOnClickListener {
-            val intent = Intent(activity, ViewPdfActivity::class.java)
-            activity?.startActivity(intent)
+
+
         }
 
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,6 +51,22 @@ class MessagesFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_messages, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        //val showBtn: Button = findViewById(R.id.button_send)
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+        showBtn = view.findViewById(R.id.view_pdf_btn)
+        showBtn.setOnClickListener {
+            activity?.let{
+                val intent = Intent (it, ViewPdfActivity::class.java)
+                it.startActivity(intent)
+            }
+
+        }
     }
 
     companion object {

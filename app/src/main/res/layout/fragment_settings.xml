@@ -103,10 +103,10 @@
             android:text="Logout" />
 
 
-        <TextView
-            style="@style/viewParent.headerText.settingsMiniTitle"
-            android:text="App ver 2.0.1"
-            android:textAlignment="center"/>
+<!--        <TextView-->
+<!--            style="@style/viewParent.headerText.settingsMiniTitle"-->
+<!--            android:text="App ver 2.0.1"-->
+<!--            android:textAlignment="center"/>-->
 
     </LinearLayout>
 </ScrollView>
