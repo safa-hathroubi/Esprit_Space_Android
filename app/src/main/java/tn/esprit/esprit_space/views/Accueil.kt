@@ -41,8 +41,8 @@ class Accueil : AppCompatActivity() {
         val settingsFragmentInstance = SettingsFragment.newInstance("param","param")
         val transportFragmentInstance = TransportFragment.newInstance("param","param")
 
-        //display home fragment inside activity accueil
-        //replaceFragment(homeFragmentInstance, it.title.toString())
+
+
 
 
 
@@ -58,6 +58,9 @@ class Accueil : AppCompatActivity() {
         toggle.syncState()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        val fragment = supportFragmentManager.beginTransaction()
+        fragment.replace(R.id.frameLayout,HomeFragment()).commit()
 
         navView.setNavigationItemSelectedListener {
 
