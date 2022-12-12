@@ -5,6 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
+import android.webkit.WebViewClient
+import kotlinx.android.synthetic.main.activity_accueil.*
+import kotlinx.android.synthetic.main.fragment_home.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,7 +31,36 @@ class HomeFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
+/*
+        // WebViewClient allows you to handle
+        // onPageFinished and override Url loading.
+        webView.webViewClient = WebViewClient()
+
+        // this will load the url of the website
+        webView.loadUrl("https://facebook.com/esprit.tn/posts/")
+
+        // this will enable the javascript settings, it can also allow xss vulnerabilities
+        webView.settings.javaScriptEnabled = true
+
+        // if you want to enable zoom feature
+        webView.settings.setSupportZoom(true)
+
+ */
     }
+
+/*
+    // if you press Back button this code will work
+    fun onBackPressed() {
+        // if your webview can go back it will go back
+        if (webView.canGoBack())
+            webView.goBack()
+
+        // if your webview cannot go back
+        // it will exit the application
+        else
+            super.onBackPressed()
+    }*/
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,6 +68,24 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        //WebView1: WebView = view.findViewById(R.id.WebView1)
+        WebView1.webViewClient = object : WebViewClient() {
+            override fun shouldOverrideUrlLoading(
+                view: WebView,
+                url: String
+            ): Boolean {
+                view.loadUrl(url)
+                return true
+            }}
+
+        WebView1.loadUrl("https://facebook.com/esprit.tn/posts/")
+        WebView1.settings.javaScriptEnabled = true
+        WebView1.settings.allowContentAccess = true
+        WebView1.settings.domStorageEnabled = true
+        WebView1.settings.useWideViewPort = true
     }
 
     companion object {

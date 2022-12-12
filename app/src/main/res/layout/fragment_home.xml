@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+<FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <include layout="@layout/home_content"/>
+<!--    <include layout="@layout/home_content"/>-->
+
+    <WebView
+        android:id="@+id/WebView1"
+        android:layout_width="match_parent"
+        android:layout_height="670dp"
+        />
+
 
 </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

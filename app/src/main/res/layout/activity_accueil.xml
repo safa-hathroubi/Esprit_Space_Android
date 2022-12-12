@@ -32,12 +32,12 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <!-- Place Web-view on the Screen -->
-        <WebView
-            android:id="@+id/webView"
-            android:layout_width="match_parent"
-            android:layout_height="670dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+<!--        <WebView-->
+<!--            android:id="@+id/webView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="670dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/toolbar" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

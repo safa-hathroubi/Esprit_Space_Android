@@ -31,6 +31,8 @@ class Accueil : AppCompatActivity() {
         setContentView(R.layout.activity_accueil)
         setSupportActionBar(toolbar)
 
+
+
         val homeFragmentInstance = HomeFragment.newInstance("param","param")
         val messagesFragmentInstance = MessagesFragment.newInstance("param","param")
         val aboutFragmentInstance = AboutFragment.newInstance("param","param")
@@ -38,6 +40,12 @@ class Accueil : AppCompatActivity() {
         val evaluationFragmentInstance = EvaluationFragment()
         val settingsFragmentInstance = SettingsFragment.newInstance("param","param")
         val transportFragmentInstance = TransportFragment.newInstance("param","param")
+
+        //display home fragment inside activity accueil
+        //replaceFragment(homeFragmentInstance, it.title.toString())
+
+
+
 
         mSharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
         Toast.makeText(this@Accueil, "Welcome "+ mSharedPref.getString(LOGIN, "").toString(), Toast.LENGTH_SHORT).show()
@@ -74,31 +82,11 @@ class Accueil : AppCompatActivity() {
 
         }
 
-        // WebViewClient allows you to handle
-        // onPageFinished and override Url loading.
-        webView.webViewClient = WebViewClient()
 
-        // this will load the url of the website
-        webView.loadUrl("https://facebook.com/esprit.tn/posts/")
-
-        // this will enable the javascript settings, it can also allow xss vulnerabilities
-        webView.settings.javaScriptEnabled = true
-
-        // if you want to enable zoom feature
-        webView.settings.setSupportZoom(true)
 
     }
 
-    // if you press Back button this code will work
-    override fun onBackPressed() {
-        // if your webview can go back it will go back
-        if (webView.canGoBack())
-            webView.goBack()
-        // if your webview cannot go back
-        // it will exit the application
-        else
-            super.onBackPressed()
-    }
+
 
 
     /*private fun replaceFragment(fragment: Fragment, title: String){
