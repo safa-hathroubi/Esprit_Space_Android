@@ -1,5 +1,6 @@
 package tn.esprit.esprit_space.views
 
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,7 +11,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.home_content.*
+import kotlinx.android.synthetic.main.fragment_settings.*
 import tn.esprit.esprit_space.*
 
 
@@ -84,6 +85,10 @@ class Accueil : AppCompatActivity() {
 
 
         }
+/*
+        logout_txtview.setOnClickListener { val intent = Intent(this@Accueil, MainActivity::class.java)
+            startActivity(intent)
+            finish() }*/
 
 
 

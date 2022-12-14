@@ -74,18 +74,18 @@
 
         <TextView
             style="@style/viewParent.headerText.settingsTextIcon"
-            android:drawableLeft="@drawable/ic_edit_password"
             android:layout_marginTop="10dp"
-            android:text="Change Password" />
+            android:text="Change Password"
+            app:drawableLeftCompat="@drawable/ic_edit_password" />
 
         <TextView
             style="@style/viewParent.headerText.settingsMiniTitle"
             android:text="Notifications"/>
 
-        <Switch
+        <com.google.android.material.switchmaterial.SwitchMaterial
             style="@style/settingsText"
             android:checked="true"
-            android:drawableLeft="@drawable/ic_notifications"
+            android:drawableStart="@drawable/ic_notifications"
             android:text="Notifications" />
 
         <TextView
@@ -94,13 +94,14 @@
 
         <TextView
             style="@style/viewParent.headerText.settingsTextIcon"
-            android:drawableLeft="@drawable/ic_languages"
-            android:text="Language" />
+            android:text="Language"
+            app:drawableLeftCompat="@drawable/ic_languages" />
 
         <TextView
+            android:id="@+id/logout_txtview"
             style="@style/viewParent.headerText.settingsTextIcon"
-            android:drawableLeft="@drawable/ic_logout"
-            android:text="Logout" />
+            android:text="Logout"
+            app:drawableLeftCompat="@drawable/ic_logout" />
 
 
 <!--        <TextView-->
