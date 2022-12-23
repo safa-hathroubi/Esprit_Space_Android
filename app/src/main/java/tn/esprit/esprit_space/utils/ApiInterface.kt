@@ -16,7 +16,7 @@ interface ApiInterface {
     fun getUserNotes(@Body map : HashMap<String, String> ): Call<Notes>
 
     companion object {
-        var BASE_URL = "http://192.168.1.36:5000/" //change with ur localhost
+        var BASE_URL = "http://10.0.2.2:5000/" //change with ur localhost
         fun create() : ApiInterface {
             val retrofit = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
