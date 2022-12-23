@@ -4,7 +4,9 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 //import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -16,9 +18,18 @@ import tn.esprit.esprit_space.*
 
 
 import android.webkit.WebViewClient
+import androidx.core.content.ContentProviderCompat.requireContext
 import kotlinx.android.synthetic.main.activity_accueil.*
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_evaluation.*
 import kotlinx.android.synthetic.main.home_content.toolbar
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import tn.esprit.esprit_space.models.Notes
+import tn.esprit.esprit_space.utils.ApiInterface
+import android.content.Context
+
 
 
 class Accueil : AppCompatActivity() {
@@ -91,8 +102,8 @@ class Accueil : AppCompatActivity() {
             finish() }*/
 
 
-
     }
+
 
 
 

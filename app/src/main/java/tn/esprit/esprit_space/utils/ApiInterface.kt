@@ -3,6 +3,7 @@ import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.*
+import tn.esprit.esprit_space.models.Absences
 import tn.esprit.esprit_space.models.Notes
 import tn.esprit.esprit_space.models.User
 
@@ -14,6 +15,9 @@ interface ApiInterface {
 
     @POST("notes/getUserNotes")
     fun getUserNotes(@Body map : HashMap<String, String> ): Call<Notes>
+
+    @POST("absence/getUserAbs")
+    fun getUserAbs(@Body map : HashMap<String, String> ): Call<Absences>
 
     companion object {
         var BASE_URL = "http://10.0.2.2:5000/" //change with ur localhost
