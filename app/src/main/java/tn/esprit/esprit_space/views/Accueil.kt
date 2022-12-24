@@ -29,7 +29,8 @@ import retrofit2.Response
 import tn.esprit.esprit_space.models.Notes
 import tn.esprit.esprit_space.utils.ApiInterface
 import android.content.Context
-
+import kotlinx.android.synthetic.main.fragment_absences.*
+import tn.esprit.esprit_space.models.Absences
 
 
 class Accueil : AppCompatActivity() {
@@ -102,9 +103,69 @@ class Accueil : AppCompatActivity() {
             finish() }*/
 
 
+        refresh(this@Accueil)
+        //requireContext().
+        mSharedPref = getSharedPreferences(PREF_NAME, AppCompatActivity.MODE_PRIVATE);
+        GetAbs(mSharedPref.getString(ID, "").toString())
+
+
+    }
+    //val email1 = "example@domain.com"
+
+    fun extractNameFromEmail(email1 : String): String {
+        email1.substringBefore("@")
+        email1.replace(".", " ")
+        return email1
     }
 
 
+    fun refresh(context: Context?)
+    {
+        context?.let {
+            val fragementManager = (context as? AppCompatActivity)?.supportFragmentManager
+            fragementManager?.let {
+                val currentFragement = fragementManager.findFragmentById(R.id.frameLayout)
+                currentFragement?.let {
+                    val fragmentTransaction = fragementManager.beginTransaction()
+                    fragmentTransaction.detach(it)
+                    fragmentTransaction.attach(it)
+                    fragmentTransaction.commit()
+                }
+            }
+        }
+    }
+
+
+    private fun GetAbs(iduser : String) {
+        val apiInterface = ApiInterface.create()
+        val map: HashMap<String, String> = HashMap()
+        map["iduser"] = iduser
+
+        apiInterface.getUserAbs(map).enqueue(object : Callback<Absences> {
+
+            override fun onResponse(call: Call<Absences>, response: Response<Absences>) {
+
+                val abss = response.body()
+                if (abss != null) {
+                    Log.e("Notes : ", abss.toString())
+                    ab_row_subj1.setText(abss.matiere)
+                    ab_row_date1.setText(abss.date)
+                    ab_row_justif1.setText(abss.justificatif)
+                } else {
+
+                    ab_row_subj1.setText(abss.toString())
+                    ab_row_date1.setText(abss.toString())
+                    ab_row_justif1.setText(abss.toString())
+                }
+            }
+
+            override fun onFailure(call: Call<Absences>, t: Throwable) {
+                Toast.makeText(this@Accueil, "Connexion error!", Toast.LENGTH_SHORT).show()
+            }
+
+        })
+
+    }
 
 
 
