@@ -23,6 +23,7 @@
         <entry key="..\:/Users/HP/Documents/Atelier Android/hhhhh/emna/Esprit_Space-master/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1755" />
         <entry key="..\:/Users/HP/Documents/Atelier Android/hhhhh/emna/Esprit_Space-master/app/src/main/res/drawable/button_shape_try.xml" value="0.1165" />
         <entry key="..\:/Users/HP/Documents/Atelier Android/hhhhh/emna/Esprit_Space-master/app/src/main/res/drawable/drawable_background.xml" value="0.154" />
+        <entry key="..\:/Users/HP/Documents/Atelier Android/hhhhh/emna/Esprit_Space-master/app/src/main/res/drawable/gradient_overlay.xml" value="0.125" />
         <entry key="..\:/Users/HP/Documents/Atelier Android/hhhhh/emna/Esprit_Space-master/app/src/main/res/drawable/gradient_red.xml" value="0.1565" />
         <entry key="..\:/Users/HP/Documents/Atelier Android/hhhhh/emna/Esprit_Space-master/app/src/main/res/drawable/gradient_white.xml" value="0.1155" />
         <entry key="..\:/Users/HP/Documents/Atelier Android/hhhhh/emna/Esprit_Space-master/app/src/main/res/drawable/grey_.xml" value="0.1565" />
@@ -43,7 +44,7 @@
         <entry key="..\:/Users/HP/Documents/Atelier Android/hhhhh/emna/Esprit_Space-master/app/src/main/res/layout/fragment_maps.xml" value="0.225" />
         <entry key="..\:/Users/HP/Documents/Atelier Android/hhhhh/emna/Esprit_Space-master/app/src/main/res/layout/fragment_messages.xml" value="0.25" />
         <entry key="..\:/Users/HP/Documents/Atelier Android/hhhhh/emna/Esprit_Space-master/app/src/main/res/layout/fragment_pdf.xml" value="0.25" />
-        <entry key="..\:/Users/HP/Documents/Atelier Android/hhhhh/emna/Esprit_Space-master/app/src/main/res/layout/fragment_settings.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Documents/Atelier Android/hhhhh/emna/Esprit_Space-master/app/src/main/res/layout/fragment_settings.xml" value="0.22" />
         <entry key="..\:/Users/HP/Documents/Atelier Android/hhhhh/emna/Esprit_Space-master/app/src/main/res/layout/fragment_transport.xml" value="0.25" />
         <entry key="..\:/Users/HP/Documents/Atelier Android/hhhhh/emna/Esprit_Space-master/app/src/main/res/layout/home_content.xml" value="0.1453125" />
         <entry key="..\:/Users/HP/Documents/Atelier Android/hhhhh/emna/Esprit_Space-master/app/src/main/res/layout/nav_header.xml" value="0.225" />

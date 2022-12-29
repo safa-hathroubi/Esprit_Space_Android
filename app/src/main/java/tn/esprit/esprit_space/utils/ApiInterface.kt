@@ -14,20 +14,21 @@ interface ApiInterface {
     @POST("user/signup")
     fun signup(@Body map : HashMap<String, String> ): Call<User>
 
+    @POST("user/getUserEmail")
+    fun getUserEmail(@Body map : HashMap<String, String> ): Call<User>
+
     @POST("notes/getUserNotes")
     fun getUserNotes(@Body map : HashMap<String, String> ): Call<Notes>
 
     @POST("absence/getUserAbs")
     fun getUserAbs(@Body map : HashMap<String, String> ): Call<Absences>
 
-    @POST("use/getUserEmail")
-    fun getUserEmail(@Body map : HashMap<String, String> ): Call<User>
 
     @POST("classe/getUserClasses")
     fun getUserClasses(@Body map : HashMap<String, String> ): Call<Classe>
 
     companion object {
-        var BASE_URL = "http://10.0.2.2:5000/" //change with ur localhost
+        var BASE_URL = "http://172.21.112.1:5000/" //change with ur localhost
         fun create() : ApiInterface {
             val retrofit = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())

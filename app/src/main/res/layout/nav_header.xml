@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:paddingTop="8dp"
-        android:text="@string/safa"
+        android:text="@string/name"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold" />

@@ -1,6 +1,5 @@
 <resources>
     <string name="rate">About us</string>
-    <string name="about_us">About us</string>
     <string name="abs_list">Absences list:</string>
 
     <string name="accueil">Hii</string>
@@ -20,6 +19,8 @@
     <string name="input_password">Input password</string>
     <string name="justif">Justification</string>
 
+    <string name="about_us">LÉcole supérieure privée d ingénierie et de technologie ou ESPRIT est une école d ingénieurs privée de Tunisie basée à l Ariana et agréée par le ministère de l Enseignement supérieur et de la Recherche scientifique. ESPRIT a également une branche école de commerce, la ESPRIT Business School</string>
+
     <string name="login">LOGIN</string>
     <string name="logout">Logout</string>
     <string name="mustNotBeEmpty">Must not be empty!</string>
@@ -31,8 +32,8 @@
     <string name="password_forgotten">Password forgotten?</string>
     <string name="rememberMe">Remember me</string>
 
-    <string name="safa">Safa Hathroubi</string>
-    <string name="safa_email">safa.hathroubii@esprit.tn</string>
+    <string name="name">Safa Hathrjhgfdoubi</string>
+    <string name="safa_email">safa.hna,;aaathroubii@esprit.tn</string>
     <string name="settings">Settings</string>
     <string name="signIn">Sign in</string>
     <string name="signup">Sign Up</string>
@@ -54,5 +55,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="logoutTitle">Logout</string>
     <string name="logoutMessage">You will be required to signin again next time!</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 </resources>

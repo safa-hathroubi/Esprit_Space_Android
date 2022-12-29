@@ -181,7 +181,11 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?)  {
         refresh(context)
         mSharedPref = requireContext().getSharedPreferences(PREF_NAME, AppCompatActivity.MODE_PRIVATE);
+        Toast.makeText(context, "Flag000", Toast.LENGTH_SHORT).show()
+        print("test")
         GetClasse(mSharedPref.getString(ID, "").toString())
+        Toast.makeText(context, "Flag00", Toast.LENGTH_SHORT).show()
+        GetName(mSharedPref.getString(ID, "").toString())
         //GetEmail("637bc4965a7ee89544b57387")
         //resultat.setText("Hiii")
     }
@@ -213,6 +217,63 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
         })
 
     }
+
+
+
+
+/*
+    fun extractNameFromEmail(email1 : String): String {
+        email1.substringBefore("@")
+        email1.replace(".", " ")
+        return email1
+    }
+*/
+
+
+    private fun GetName(iduser : String) {
+        val apiInterface = ApiInterface.create()
+        val map: HashMap<String, String> = HashMap()
+        map["iduser"] = iduser
+        Toast.makeText(context, "Flag0", Toast.LENGTH_SHORT).show()
+
+        apiInterface.getUserEmail(map).enqueue(object : Callback<User> {
+
+
+            override fun onResponse(call: Call<User>, response: Response<User>) {
+                Toast.makeText(context, "Flag1", Toast.LENGTH_SHORT).show()
+
+                val user = response.body()
+                if (user != null) {
+                    Log.e("Use : ", user.toString())
+                    Toast.makeText(context, "Flag2", Toast.LENGTH_SHORT).show()
+                    usernameTextView.setText(user.login)
+
+/*
+                    var email1 = user.login
+                    email1 = extractNameFromEmail(email1)
+                    //user_name.setText(email1)
+                    usernameTextView.text = email1
+                    */
+
+
+
+                } else {
+                    Toast.makeText(context, "Flag3", Toast.LENGTH_SHORT).show()
+
+                    usernameTextView.setText(user.toString())
+                }
+            }
+
+
+            override fun onFailure(call: Call<User>, t: Throwable) {
+                Toast.makeText(context, "Connexion error!", Toast.LENGTH_SHORT).show()
+            }
+
+        })
+
+    }
+
+
     /*override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val clickListener = View.OnClickListener {view ->
 
