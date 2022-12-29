@@ -11,13 +11,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_sign_up.*
 import kotlinx.android.synthetic.main.fragment_evaluation.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import tn.esprit.esprit_space.models.Notes
-import tn.esprit.esprit_space.models.User
 import tn.esprit.esprit_space.utils.ApiInterface
 
 // TODO: Rename parameter arguments, choose names that match

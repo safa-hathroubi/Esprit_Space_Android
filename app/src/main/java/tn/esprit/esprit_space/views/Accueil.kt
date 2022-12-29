@@ -1,36 +1,35 @@
 package tn.esprit.esprit_space.views
 
-import android.content.Intent
+//import androidx.appcompat.app.ActionBar
+
+
+//import android.R
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
-//import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.fragment_settings.*
-import tn.esprit.esprit_space.*
-
-
-import android.webkit.WebViewClient
-import androidx.core.content.ContentProviderCompat.requireContext
 import kotlinx.android.synthetic.main.activity_accueil.*
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_absences.*
 import kotlinx.android.synthetic.main.fragment_evaluation.*
+import kotlinx.android.synthetic.main.fragment_settings.*
 import kotlinx.android.synthetic.main.home_content.toolbar
+import kotlinx.android.synthetic.main.nav_header.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import tn.esprit.esprit_space.models.Notes
+import tn.esprit.esprit_space.*
+import tn.esprit.esprit_space.models.User
 import tn.esprit.esprit_space.utils.ApiInterface
-import android.content.Context
-import kotlinx.android.synthetic.main.fragment_absences.*
-import tn.esprit.esprit_space.models.Absences
 
 
 class Accueil : AppCompatActivity() {
@@ -39,10 +38,16 @@ class Accueil : AppCompatActivity() {
     lateinit var toggle : ActionBarDrawerToggle
     lateinit var drawerLayout: DrawerLayout
 
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_accueil)
         setSupportActionBar(toolbar)
+
+
+        val navView : NavigationView = findViewById(R.id.nav_view)
 
 
 
@@ -64,7 +69,7 @@ class Accueil : AppCompatActivity() {
         Toast.makeText(this@Accueil, "Welcome "+ mSharedPref.getString(LOGIN, "").toString(), Toast.LENGTH_SHORT).show()
 
         drawerLayout = findViewById(R.id.drawer_layout)
-        val navView : NavigationView = findViewById(R.id.nav_view)
+
 
         toggle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
         drawerLayout.addDrawerListener(toggle)
@@ -84,13 +89,26 @@ class Accueil : AppCompatActivity() {
                 R.id.nav_home -> replaceFragment(homeFragmentInstance, it.title.toString())
                 R.id.nav_message -> replaceFragment(messagesFragmentInstance, it.title.toString())
 
-                
+
 
                 R.id.nav_sync -> replaceFragment(evaluationFragmentInstance, it.title.toString())
                 R.id.nav_trash -> replaceFragment(absencesFragmentInstance, it.title.toString())
                 R.id.nav_share -> replaceFragment(transportFragmentInstance, it.title.toString())
                 R.id.nav_login -> replaceFragment(settingsFragmentInstance, it.title.toString())
                 R.id.nav_rate_us -> replaceFragment(aboutFragmentInstance, it.title.toString())
+                R.id.nav_logout -> {
+                    val builder = AlertDialog.Builder(this)
+                    builder.setTitle(getString(R.string.logoutTitle))
+                    builder.setMessage(R.string.logoutMessage)
+                    builder.setPositiveButton("Yes"){ dialogInterface, which ->
+                        getSharedPreferences(PREF_NAME, MODE_PRIVATE).edit().clear().apply()
+                        finish()
+                    }
+                    builder.setNegativeButton("No"){dialogInterface, which ->
+                        dialogInterface.dismiss()
+                    }
+                    builder.create().show()
+                }
             }
 
             true
@@ -103,14 +121,15 @@ class Accueil : AppCompatActivity() {
             finish() }*/
 
 
-        refresh(this@Accueil)
+        //refresh(this@Accueil)        --------APP KEEPS STOPPING
         //requireContext().
-        mSharedPref = getSharedPreferences(PREF_NAME, AppCompatActivity.MODE_PRIVATE);
-        GetAbs(mSharedPref.getString(ID, "").toString())
+        //mSharedPref = getSharedPreferences(PREF_NAME, AppCompatActivity.MODE_PRIVATE);   ---DUPLICATE
 
 
     }
-    //val email1 = "example@domain.com"
+
+
+
 
     fun extractNameFromEmail(email1 : String): String {
         email1.substringBefore("@")
@@ -119,7 +138,8 @@ class Accueil : AppCompatActivity() {
     }
 
 
-    fun refresh(context: Context?)
+    /*   APP  KEEPS STOPPING SO IM TAKING THIS OUT
+        fun refresh(context: Context?)
     {
         context?.let {
             val fragementManager = (context as? AppCompatActivity)?.supportFragmentManager
@@ -133,39 +153,11 @@ class Accueil : AppCompatActivity() {
                 }
             }
         }
-    }
+    }*/
 
 
-    private fun GetAbs(iduser : String) {
-        val apiInterface = ApiInterface.create()
-        val map: HashMap<String, String> = HashMap()
-        map["iduser"] = iduser
 
-        apiInterface.getUserAbs(map).enqueue(object : Callback<Absences> {
 
-            override fun onResponse(call: Call<Absences>, response: Response<Absences>) {
-
-                val abss = response.body()
-                if (abss != null) {
-                    Log.e("Notes : ", abss.toString())
-                    ab_row_subj1.setText(abss.matiere)
-                    ab_row_date1.setText(abss.date)
-                    ab_row_justif1.setText(abss.justificatif)
-                } else {
-
-                    ab_row_subj1.setText(abss.toString())
-                    ab_row_date1.setText(abss.toString())
-                    ab_row_justif1.setText(abss.toString())
-                }
-            }
-
-            override fun onFailure(call: Call<Absences>, t: Throwable) {
-                Toast.makeText(this@Accueil, "Connexion error!", Toast.LENGTH_SHORT).show()
-            }
-
-        })
-
-    }
 
 
 
@@ -203,6 +195,7 @@ class Accueil : AppCompatActivity() {
 
 
 }
+
 
 
 

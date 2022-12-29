@@ -11,7 +11,7 @@
     <string name="close">Close</string>
     <string name="date">Date</string>
 
-    <string name="edit_profile">Edit Profile</string>
+    <string name="edit_profile">Edit Picture</string>
     <string name="exam">Exam</string>
 
     <string name="home">Home</string>
@@ -21,6 +21,7 @@
     <string name="justif">Justification</string>
 
     <string name="login">LOGIN</string>
+    <string name="logout">Logout</string>
     <string name="mustNotBeEmpty">Must not be empty!</string>
 
 
@@ -31,7 +32,7 @@
     <string name="rememberMe">Remember me</string>
 
     <string name="safa">Safa Hathroubi</string>
-    <string name="safa_email">safa.hathroubi@esprit.tn</string>
+    <string name="safa_email">safa.hathroubii@esprit.tn</string>
     <string name="settings">Settings</string>
     <string name="signIn">Sign in</string>
     <string name="signup">Sign Up</string>
@@ -51,5 +52,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logoutTitle">Logout</string>
+    <string name="logoutMessage">You will be required to signin again next time!</string>
 
 </resources>

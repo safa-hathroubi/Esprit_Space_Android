@@ -57,6 +57,7 @@ class AbsencesFragment : Fragment(R.layout.fragment_absences) {
         var rootView: View = inflater.inflate(R.layout.fragment_absences, container, false)
         return rootView
     }
+
     fun refresh(context: Context?)
     {
         context?.let {

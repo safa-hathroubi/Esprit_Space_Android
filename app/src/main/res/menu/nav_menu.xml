@@ -65,4 +65,21 @@
 
     </item>
 
+
+    <item android:title="User">
+
+        <menu>
+            <group>
+
+
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/ic_about_us"
+                    android:title="@string/logout"/>
+
+            </group>
+        </menu>
+
+    </item>
+
 </menu>
